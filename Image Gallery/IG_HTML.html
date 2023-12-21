@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="IG_CSS.css" />
+  </head>
+  <body>
+    <div class="gallery-wrap">
+      <img src="IG_IMAGES/back.png" id="backBtn" />
+      <div class="gallery">
+        <div>
+          <span><img src="IG_IMAGES/image_7.jpg" /></span>
+          <span><img src="IG_IMAGES/image_2" /></span>
+
+          <span><img src="IG_IMAGES/image_3" /></span>
+        </div>
+        <div>
+          <span><img src="IG_IMAGES/image_4.jpg" /></span>
+          <span><img src="IG_IMAGES/image_5.jpg" /></span>
+          <span><img src="IG_IMAGES/image_6.jpg" /></span>
+          <span><img src="IG_IMAGES/image_1.png" /></span>
+        </div>
+      </div>
+      <img src="IG_IMAGES/next.png" id="nextBtn" />
+    </div>
+
+    <script>
+      let scrollContainer = document.querySelector(".gallery");
+      let backBtn = document.getElementById("backBtn");
+      let nextBtn = document.getElementById("nextBtn");
+
+      scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+        scrollContainer.style.scrollBehavior = "auto";
+      });
+
+      nextBtn.addEventListener("click", () => {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 900;
+      });
+
+      backBtn.addEventListener("click", () => {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= 900;
+      });
+    </script>
+  </body>
+</html>
