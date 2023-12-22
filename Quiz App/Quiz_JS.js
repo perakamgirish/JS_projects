@@ -24,8 +24,8 @@ const questions = [
     answers: [
       { Text: "Kalahari", correct: false },
       { Text: "Gobi", correct: false },
-      { Text: "Sahara", correct: false },
-      { Text: "Antrctica", correct: true },
+      { Text: "Sahara", correct: true },
+      { Text: "Antrctica", correct: false },
     ],
   },
 
@@ -52,7 +52,7 @@ const questions = [
     ],
   },
 ];
-const questionElement = document.getElementById("questions");
+const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer_buttons");
 const nextButton = document.getElementById("next-btn");
 
