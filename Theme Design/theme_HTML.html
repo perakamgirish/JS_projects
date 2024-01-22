@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Design</title>
+    <link rel="stylesheet" href="theme_CSS.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <img src="theme_Design_images/moon.png" id="icon" />
+    </div>
+
+    <script>
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "theme_Design_images/sun.png";
+        } else {
+          icon.src = "theme_Design_images/moon.png";
+        }
+      };
+    </script>
+  </body>
+</html>
